@@ -24,7 +24,7 @@ import javax.swing.JOptionPane;
  * (출력물엔 id, 비번 안보임)
  * */
 
-
+ 
 public class AccountMain {
 	enum AccountButt {
 		BASIC, MINUS, EXIT
@@ -42,10 +42,11 @@ public class AccountMain {
 			switch (select) {
 			case BASIC:
 				account = new Account();
+				
 				account.setName(JOptionPane.showInputDialog("이름?"));
 				account.setUid(JOptionPane.showInputDialog("ID?"));
 				account.setPw(JOptionPane.showInputDialog("비밀번호?"));
-
+				
 				JOptionPane.showMessageDialog(null, account.toString());
 				break;
 			case MINUS:

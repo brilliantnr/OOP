@@ -35,7 +35,7 @@ public class Main {
 					JOptionPane.QUESTION_MESSAGE, null, buttons, null);
 			switch (select) {
 			case EXIT:
-				return;
+				return; 
 			case INPUT_BMI:
 				bmi=new BMI();
 				bmi.setName(JOptionPane.showInputDialog("이름?"));

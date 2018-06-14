@@ -16,7 +16,7 @@ public class PhoneMain {
 		CellPhone cp = null;
 		IPhone ip = null;
 		Galaxy gp = null;
-
+ 
 		while (true) {
 			PhoneButt select = (PhoneButt) JOptionPane.showInputDialog(null, "MAIN PAGE", "SELECT MENU",
 					JOptionPane.QUESTION_MESSAGE, null, buttons, null);

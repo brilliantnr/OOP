@@ -7,7 +7,7 @@ public class Galaxy extends IPhone {
 
 	public void setSize(String size) {
 		
-		this.size = size;
+		this.size = "6";
 	}
 
 	public void setData(String data) {
@@ -25,7 +25,7 @@ public class Galaxy extends IPhone {
 	public String toString() {
 
 		super.setPortable(true);
-		return String.format("%s 에게 %s 번호로 %s 제품  %s 를 사용해서 %s 상태로 %s", super.getName(), super.getPhoneNum(),
-				BRNAD, KIND, super.getMove(), super.data);
+		return String.format("%s 에게 %s 번호로 %s 제품 %s 인치 %s 를 사용해서 %s 상태로 %s", super.getName(), super.getPhoneNum(),
+				BRNAD,size, KIND, super.getMove(), super.data);
 	}
 }

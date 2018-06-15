@@ -2,15 +2,15 @@ package ui;
 
 import javax.swing.JOptionPane;
 import domain.BMI;
+import domain.BMISalary;
 import domain.Grade;
-import domain.Salary;
 import domain.Lotto;
 
 enum Butt{
 	EXIT,
 	INPUT_BMI,OUTPUT_BMI,
 	INPUT_GRADE,OUTPUT_GRADE,
-	INPUT_SALARY,OUTPUT_SALARY,
+	INPUT_SALARY,OUTPUT_SALARY, 
 	INPUT_LOTTOMONEY,OUTPUT_LOTTO;
 }
 public class Main {
@@ -24,8 +24,8 @@ public class Main {
 		int count = 0;
 		Grade[] arrs = new Grade[2];
 		Grade grade = null;
-		Salary[] ar = new Salary[2];
-		Salary salary = null;
+		BMISalary[] ar = new BMISalary[2];
+		BMISalary salary = null;
 		Lotto[] loarr = new Lotto[2];
 		Lotto lotto = null;
 		
@@ -76,7 +76,7 @@ public class Main {
 				break;
 				
 			case INPUT_SALARY:
-				salary = new Salary();
+				salary = new BMISalary();
 				salary.setDept(JOptionPane.showInputDialog("부서명"));
 				salary.setName(JOptionPane.showInputDialog("이름"));
 				salary.setSal(Integer.parseInt(JOptionPane.showInputDialog("본봉?")));

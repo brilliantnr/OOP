@@ -1,13 +1,10 @@
 package ui;
-
-import javax.swing.JOptionPane;
 import domain.*;
-import service.*;
-import serviceImpl.*;
+import javax.swing.JOptionPane;
 
 /**---------------------------
  *
- * (계좌번호는랜덤생성)
+ * (계쫘번호는랜덤생성)
  * 
  * 비트뱅크
  * 기본통장
@@ -15,7 +12,7 @@ import serviceImpl.*;
  * 이름 : ooo
  * 생성일: 2018년 6월 13일
  * 잔액 : 10000원
- * (입금하시겠습니까?)
+ * (입금하시겟습니까?)
  * -----------------------
  * 비트뱅크
  * 마이너스통장
@@ -27,7 +24,7 @@ import serviceImpl.*;
  * (출력물엔 id, 비번 안보임)
  * */
 
-public class AccountMain {
+public class AccountMain1st {
 	enum AccountButt {
 		BASIC, MINUS, DEPOSIT, WITHDRAW, EXIT,
 	};
@@ -39,29 +36,19 @@ public class AccountMain {
 				AccountButt.EXIT };
 		
 		Account account = null;
-		AccountService service = new AccountServiceImpl();
-		
-		int count = 0;
-		
-		
-		
-		
-		
+
 		while (true) {
 			AccountButt select = (AccountButt) JOptionPane.showInputDialog(null, "MAIN PAGE", "SELECT MENU",
 					JOptionPane.QUESTION_MESSAGE, null, buttons, null);
 
 			switch (select) {
 			case BASIC:
-				
-				account= service.createAccount(
+				account = new Account(
 						JOptionPane.showInputDialog("이름?"),
 						JOptionPane.showInputDialog("ID?"),
 						JOptionPane.showInputDialog("비밀번호?"));
-				
-				arr[count]=account;
-				
-				
+
+				JOptionPane.showMessageDialog(null, account.toString());
 				break;
 			case MINUS:
 				

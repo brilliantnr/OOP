@@ -13,9 +13,7 @@ public class PhoneMain {
 		PhoneButt[] buttons = { PhoneButt.EXIT, PhoneButt.TELEPHONE, PhoneButt.CELLPHONE,
 				PhoneButt.IPHONE ,PhoneButt.GALAXY};
 		Phone phone = null;
-		CellPhone cp = null;
-		IPhone ip = null;
-		Galaxy gp = null;
+	
  
 		while (true) {
 			PhoneButt select = (PhoneButt) JOptionPane.showInputDialog(null, "MAIN PAGE", "SELECT MENU",
@@ -33,30 +31,32 @@ public class PhoneMain {
 				break;
 
 			case CELLPHONE:
-				cp = new CellPhone();
-				cp.setName(JOptionPane.showInputDialog("이름"));
-				cp.setPhoneNum(JOptionPane.showInputDialog("전화번호"));
-				cp.setCall(JOptionPane.showInputDialog("통화내용"));
-				cp.setPortable(true);
-				JOptionPane.showMessageDialog(null, cp.toString());
+				phone = new CellPhone();
+				phone.setName(JOptionPane.showInputDialog("이름"));
+				phone.setPhoneNum(JOptionPane.showInputDialog("전화번호"));
+				phone.setCall(JOptionPane.showInputDialog("통화내용"));
+				((CellPhone) phone).setPortable(true);
+				JOptionPane.showMessageDialog(null, phone.toString());
 				break;
 
 			case IPHONE:
-				ip = new IPhone();
-				ip.setName(JOptionPane.showInputDialog("이름"));
-				ip.setPhoneNum(JOptionPane.showInputDialog("전화번호"));
-				ip.setCall(JOptionPane.showInputDialog("통화내용"));
-				ip.setPortable(true);
-				JOptionPane.showMessageDialog(null, ip.toString());
+				phone = new IPhone();
+				phone.setName(JOptionPane.showInputDialog("이름"));
+				phone.setPhoneNum(JOptionPane.showInputDialog("전화번호"));
+				phone.setCall(JOptionPane.showInputDialog("통화내용"));
+				((CellPhone) phone).setPortable(true);
+				JOptionPane.showMessageDialog(null, phone.toString());
 				break;
+				
 			case GALAXY:
-				gp = new Galaxy();
-				gp.setName(JOptionPane.showInputDialog("이름"));
-				gp.setPhoneNum(JOptionPane.showInputDialog("전화번호"));
-				gp.setCall(JOptionPane.showInputDialog("통화내용"));
-				gp.setPortable(true);
-				JOptionPane.showMessageDialog(null, gp.toString());
+				phone = new Galaxy();
+				phone.setName(JOptionPane.showInputDialog("이름"));
+				phone.setPhoneNum(JOptionPane.showInputDialog("전화번호"));
+				phone.setCall(JOptionPane.showInputDialog("통화내용"));
+				((CellPhone) phone).setPortable(true);
+				JOptionPane.showMessageDialog(null, phone.toString());
 				break;
+				
 			default:
 				break;
 			}

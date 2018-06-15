@@ -6,13 +6,13 @@ public class Phone {
 	
 	public void setName(String name) {
 		this.name=name;
-	}
+	} 
 	public void setPhoneNum(String phoneNum) {
 		this.phoneNum=phoneNum;
 	}
 	public void setCall(String call) {
 		this.call=call;
-	}
+	} 
 	
 	
 	public String getName() {
